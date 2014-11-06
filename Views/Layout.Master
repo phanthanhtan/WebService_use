@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="WebService_use.Views.Layout" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Web Service - Thông tin đào tạo - Đại học Sài Gòn</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/Image/Layout/ws.jpg" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/css_js/bootstrap.min.css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="/css_js/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="/css_js/css.css" />
+    <script src="/css_js/jquery.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="container">
+        <!-- Static navbar -->
+        <div class="navbar navbar-default" role="navigation">
+            <div class="container-fluid">
+                <div class="row">
+                    <img src="/Image/Layout/Banner.png" style="width:100%"/>
+                </div>
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Webservice</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="TrangChu"><a href="/" title="Trang chủ">Trang chủ</a></li>
+                        <li id="ThongTin"><a href="/ThongTin/Index" title="Xem thông tin">Xem thông tin</a></li>
+                        <li id="Diem"><a href="/Diem/Index" title="Xem điểm">Xem điểm</a></li>
+                        <li id="LichThi"><a href="/LichThi/Index" title="Xem lịch thi">Xem lịch thi</a></li>
+                        <li id="ThoiKhoaBieu"><a href="/ThoiKhoaBieu/Index" title="Xem thời khóa biểu">Xem thời khóa biểu</a></li>
+                        <li id="SapThoiKhoaBieu"><a href="/SapXepThoiKhoaBieu/Index" title="Sắp xếp thời khóa biểu">Sắp xếp thời khóa biểu</a></li>
+                        <li id="MonHoc"><a href="/SXTKB/SXTKB_MonHoc/Index" title="Môn học để sắp xếp thời khóa biểu">Môn học</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Main component for a primary marketing message or call to action -->
+        <div class="jumbotron">
+            <p>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </p>
+        </div>
+    </div>
+    <%--<script src="/css_js/bootstrap.min.js"></script>
+    <script src="/css_js/jquery.min.js"></script>--%>
+</body>
+</html>

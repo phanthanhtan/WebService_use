@@ -1,0 +1,1117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TTDTModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="TTDTModelStoreContainer">
+          <EntitySet Name="Diem_ChiTiet" EntityType="TTDTModel.Store.Diem_ChiTiet" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Diem_TongQuat" EntityType="TTDTModel.Store.Diem_TongQuat" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HeDaoTao" EntityType="TTDTModel.Store.HeDaoTao" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="HocKy" EntityType="TTDTModel.Store.HocKy" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Khoa" EntityType="TTDTModel.Store.Khoa" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="KhoaHoc" EntityType="TTDTModel.Store.KhoaHoc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LichThi" EntityType="TTDTModel.Store.LichThi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MonHoc" EntityType="TTDTModel.Store.MonHoc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Nganh" EntityType="TTDTModel.Store.Nganh" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SXTKB_MonHoc" EntityType="TTDTModel.Store.SXTKB_MonHoc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="SXTKB_NhomMonHoc" EntityType="TTDTModel.Store.SXTKB_NhomMonHoc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Tuan" EntityType="TTDTModel.Store.Tuan" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ThoiKhoaBieu" EntityType="TTDTModel.Store.ThoiKhoaBieu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ThongTin" EntityType="TTDTModel.Store.ThongTin" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Diem_ChiTiet_HocKy" Association="TTDTModel.Store.FK_Diem_ChiTiet_HocKy">
+            <End Role="HocKy" EntitySet="HocKy" />
+            <End Role="Diem_ChiTiet" EntitySet="Diem_ChiTiet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diem_ChiTiet_MonHoc" Association="TTDTModel.Store.FK_Diem_ChiTiet_MonHoc">
+            <End Role="MonHoc" EntitySet="MonHoc" />
+            <End Role="Diem_ChiTiet" EntitySet="Diem_ChiTiet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diem_ChiTiet_TaiKhoan" Association="TTDTModel.Store.FK_Diem_ChiTiet_TaiKhoan">
+            <End Role="ThongTin" EntitySet="ThongTin" />
+            <End Role="Diem_ChiTiet" EntitySet="Diem_ChiTiet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diem_TongQuat_HocKy" Association="TTDTModel.Store.FK_Diem_TongQuat_HocKy">
+            <End Role="HocKy" EntitySet="HocKy" />
+            <End Role="Diem_TongQuat" EntitySet="Diem_TongQuat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diem_TongQuat_TaiKhoan" Association="TTDTModel.Store.FK_Diem_TongQuat_TaiKhoan">
+            <End Role="ThongTin" EntitySet="ThongTin" />
+            <End Role="Diem_TongQuat" EntitySet="Diem_TongQuat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichThi_HocKy" Association="TTDTModel.Store.FK_LichThi_HocKy">
+            <End Role="HocKy" EntitySet="HocKy" />
+            <End Role="LichThi" EntitySet="LichThi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichThi_MonHoc" Association="TTDTModel.Store.FK_LichThi_MonHoc">
+            <End Role="MonHoc" EntitySet="MonHoc" />
+            <End Role="LichThi" EntitySet="LichThi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichThi_TaiKhoan" Association="TTDTModel.Store.FK_LichThi_TaiKhoan">
+            <End Role="ThongTin" EntitySet="ThongTin" />
+            <End Role="LichThi" EntitySet="LichThi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SXTKB_NhomMonHoc_SXTKB_MonHoc" Association="TTDTModel.Store.FK_SXTKB_NhomMonHoc_SXTKB_MonHoc">
+            <End Role="SXTKB_MonHoc" EntitySet="SXTKB_MonHoc" />
+            <End Role="SXTKB_NhomMonHoc" EntitySet="SXTKB_NhomMonHoc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThoiKhoaBieu_HocKy" Association="TTDTModel.Store.FK_ThoiKhoaBieu_HocKy">
+            <End Role="HocKy" EntitySet="HocKy" />
+            <End Role="ThoiKhoaBieu" EntitySet="ThoiKhoaBieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThoiKhoaBieu_MonHoc" Association="TTDTModel.Store.FK_ThoiKhoaBieu_MonHoc">
+            <End Role="MonHoc" EntitySet="MonHoc" />
+            <End Role="ThoiKhoaBieu" EntitySet="ThoiKhoaBieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThoiKhoaBieu_TaiKhoan" Association="TTDTModel.Store.FK_ThoiKhoaBieu_TaiKhoan">
+            <End Role="ThongTin" EntitySet="ThongTin" />
+            <End Role="ThoiKhoaBieu" EntitySet="ThoiKhoaBieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThoiKhoaBieu_Tuan" Association="TTDTModel.Store.FK_ThoiKhoaBieu_Tuan">
+            <End Role="Tuan" EntitySet="Tuan" />
+            <End Role="ThoiKhoaBieu" EntitySet="ThoiKhoaBieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTin_HeDaoTao" Association="TTDTModel.Store.FK_ThongTin_HeDaoTao">
+            <End Role="HeDaoTao" EntitySet="HeDaoTao" />
+            <End Role="ThongTin" EntitySet="ThongTin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTin_Khoa" Association="TTDTModel.Store.FK_ThongTin_Khoa">
+            <End Role="Khoa" EntitySet="Khoa" />
+            <End Role="ThongTin" EntitySet="ThongTin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTin_KhoaHoc" Association="TTDTModel.Store.FK_ThongTin_KhoaHoc">
+            <End Role="KhoaHoc" EntitySet="KhoaHoc" />
+            <End Role="ThongTin" EntitySet="ThongTin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTin_Nganh" Association="TTDTModel.Store.FK_ThongTin_Nganh">
+            <End Role="Nganh" EntitySet="Nganh" />
+            <End Role="ThongTin" EntitySet="ThongTin" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Diem_ChiTiet">
+          <Key>
+            <PropertyRef Name="MaSinhVien" />
+            <PropertyRef Name="MaHocKy" />
+            <PropertyRef Name="SoThuTu" />
+          </Key>
+          <Property Name="MaSinhVien" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaHocKy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SoThuTu" Type="int" Nullable="false" />
+          <Property Name="MaMonHoc" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoTinChi" Type="int" />
+          <Property Name="PhanTramKiemTra" Type="int" />
+          <Property Name="PhanTramThi" Type="int" />
+          <Property Name="DiemKiemTra" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiemThiLanMot" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiemTongKetHeMuoi" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiemTongKetDiemChu" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Diem_TongQuat">
+          <Key>
+            <PropertyRef Name="MaSinhVien" />
+            <PropertyRef Name="MaHocKy" />
+          </Key>
+          <Property Name="MaSinhVien" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaHocKy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DiemTrungBinhHocKyHeMuoi" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiemTrungBinhHocKyHeBon" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiemTrungBinhTichLuyHeMuoi" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiemTrungBinhTichLuyHeBon" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoTinChiDat" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoTinChiTichLuy" Type="nvarchar" MaxLength="50" />
+          <Property Name="DiemTrungBinhRenLuyenHocKy" Type="nvarchar" MaxLength="50" />
+          <Property Name="PhanLoaiDTBRenLuyenHocKy" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HeDaoTao">
+          <Key>
+            <PropertyRef Name="MaHeDaoTao" />
+          </Key>
+          <Property Name="MaHeDaoTao" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenHeDaoTao" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="HocKy">
+          <Key>
+            <PropertyRef Name="MaHocKy" />
+          </Key>
+          <Property Name="MaHocKy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenHocKy" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Khoa">
+          <Key>
+            <PropertyRef Name="MaKhoa" />
+          </Key>
+          <Property Name="MaKhoa" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenKhoa" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="KhoaHoc">
+          <Key>
+            <PropertyRef Name="MaKhoaHoc" />
+          </Key>
+          <Property Name="MaKhoaHoc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenKhoaHoc" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="LichThi">
+          <Key>
+            <PropertyRef Name="MaSinhVien" />
+            <PropertyRef Name="MaHocKy" />
+            <PropertyRef Name="SoThuTu" />
+          </Key>
+          <Property Name="MaSinhVien" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaHocKy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="SoMonThi" Type="int" />
+          <Property Name="SoThuTu" Type="int" Nullable="false" />
+          <Property Name="MaMonHoc" Type="nvarchar" MaxLength="50" />
+          <Property Name="GhepThi" Type="nvarchar" MaxLength="50" />
+          <Property Name="ToThi" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoLuong" Type="int" />
+          <Property Name="NgayThi" Type="nvarchar" MaxLength="50" />
+          <Property Name="GioBatDau" Type="nvarchar" MaxLength="50" />
+          <Property Name="SoPhut" Type="int" />
+          <Property Name="Phong" Type="nvarchar" MaxLength="50" />
+          <Property Name="HinhThucThi" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="MonHoc">
+          <Key>
+            <PropertyRef Name="MaMonHoc" />
+          </Key>
+          <Property Name="MaMonHoc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenMonHoc" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Nganh">
+          <Key>
+            <PropertyRef Name="MaNganh" />
+          </Key>
+          <Property Name="MaNganh" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenNganh" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="SXTKB_MonHoc">
+          <Key>
+            <PropertyRef Name="MaMonHoc" />
+          </Key>
+          <Property Name="MaMonHoc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenMonHoc" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="SXTKB_NhomMonHoc">
+          <Key>
+            <PropertyRef Name="MaMonHoc" />
+            <PropertyRef Name="Nhom" />
+            <PropertyRef Name="Thu" />
+            <PropertyRef Name="TietBatDau" />
+          </Key>
+          <Property Name="MaMonHoc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Nhom" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Thu" Type="int" Nullable="false" />
+          <Property Name="TietBatDau" Type="int" Nullable="false" />
+          <Property Name="SoTiet" Type="int" />
+        </EntityType>
+        <EntityType Name="Tuan">
+          <Key>
+            <PropertyRef Name="MaTuan" />
+          </Key>
+          <Property Name="MaTuan" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenTuan" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="ThoiKhoaBieu">
+          <Key>
+            <PropertyRef Name="MaSinhVien" />
+            <PropertyRef Name="MaHocKy" />
+            <PropertyRef Name="MaTuan" />
+            <PropertyRef Name="MaMonHoc" />
+            <PropertyRef Name="Thu" />
+            <PropertyRef Name="TietBatDau" />
+          </Key>
+          <Property Name="MaSinhVien" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaHocKy" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaTuan" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="MaMonHoc" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="PhongHoc" Type="nvarchar" MaxLength="50" />
+          <Property Name="Thu" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TietBatDau" Type="int" Nullable="false" />
+          <Property Name="SoTiet" Type="int" />
+          <Property Name="GiangVien" Type="nvarchar" MaxLength="100" />
+          <Property Name="Lop" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ThongTin">
+          <Key>
+            <PropertyRef Name="MaSinhVien" />
+          </Key>
+          <Property Name="MaSinhVien" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="TenSinhVien" Type="nvarchar" MaxLength="100" />
+          <Property Name="Lop" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaNganh" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaKhoa" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaHeDaoTao" Type="nvarchar" MaxLength="50" />
+          <Property Name="MaKhoaHoc" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK_Diem_ChiTiet_HocKy">
+          <End Role="HocKy" Type="TTDTModel.Store.HocKy" Multiplicity="1" />
+          <End Role="Diem_ChiTiet" Type="TTDTModel.Store.Diem_ChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocKy">
+              <PropertyRef Name="MaHocKy" />
+            </Principal>
+            <Dependent Role="Diem_ChiTiet">
+              <PropertyRef Name="MaHocKy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diem_ChiTiet_MonHoc">
+          <End Role="MonHoc" Type="TTDTModel.Store.MonHoc" Multiplicity="0..1" />
+          <End Role="Diem_ChiTiet" Type="TTDTModel.Store.Diem_ChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MonHoc">
+              <PropertyRef Name="MaMonHoc" />
+            </Principal>
+            <Dependent Role="Diem_ChiTiet">
+              <PropertyRef Name="MaMonHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diem_ChiTiet_TaiKhoan">
+          <End Role="ThongTin" Type="TTDTModel.Store.ThongTin" Multiplicity="1" />
+          <End Role="Diem_ChiTiet" Type="TTDTModel.Store.Diem_ChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTin">
+              <PropertyRef Name="MaSinhVien" />
+            </Principal>
+            <Dependent Role="Diem_ChiTiet">
+              <PropertyRef Name="MaSinhVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diem_TongQuat_HocKy">
+          <End Role="HocKy" Type="TTDTModel.Store.HocKy" Multiplicity="1" />
+          <End Role="Diem_TongQuat" Type="TTDTModel.Store.Diem_TongQuat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocKy">
+              <PropertyRef Name="MaHocKy" />
+            </Principal>
+            <Dependent Role="Diem_TongQuat">
+              <PropertyRef Name="MaHocKy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diem_TongQuat_TaiKhoan">
+          <End Role="ThongTin" Type="TTDTModel.Store.ThongTin" Multiplicity="1" />
+          <End Role="Diem_TongQuat" Type="TTDTModel.Store.Diem_TongQuat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTin">
+              <PropertyRef Name="MaSinhVien" />
+            </Principal>
+            <Dependent Role="Diem_TongQuat">
+              <PropertyRef Name="MaSinhVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichThi_HocKy">
+          <End Role="HocKy" Type="TTDTModel.Store.HocKy" Multiplicity="1" />
+          <End Role="LichThi" Type="TTDTModel.Store.LichThi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocKy">
+              <PropertyRef Name="MaHocKy" />
+            </Principal>
+            <Dependent Role="LichThi">
+              <PropertyRef Name="MaHocKy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichThi_MonHoc">
+          <End Role="MonHoc" Type="TTDTModel.Store.MonHoc" Multiplicity="0..1" />
+          <End Role="LichThi" Type="TTDTModel.Store.LichThi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MonHoc">
+              <PropertyRef Name="MaMonHoc" />
+            </Principal>
+            <Dependent Role="LichThi">
+              <PropertyRef Name="MaMonHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichThi_TaiKhoan">
+          <End Role="ThongTin" Type="TTDTModel.Store.ThongTin" Multiplicity="1" />
+          <End Role="LichThi" Type="TTDTModel.Store.LichThi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTin">
+              <PropertyRef Name="MaSinhVien" />
+            </Principal>
+            <Dependent Role="LichThi">
+              <PropertyRef Name="MaSinhVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SXTKB_NhomMonHoc_SXTKB_MonHoc">
+          <End Role="SXTKB_MonHoc" Type="TTDTModel.Store.SXTKB_MonHoc" Multiplicity="1" />
+          <End Role="SXTKB_NhomMonHoc" Type="TTDTModel.Store.SXTKB_NhomMonHoc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SXTKB_MonHoc">
+              <PropertyRef Name="MaMonHoc" />
+            </Principal>
+            <Dependent Role="SXTKB_NhomMonHoc">
+              <PropertyRef Name="MaMonHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThoiKhoaBieu_HocKy">
+          <End Role="HocKy" Type="TTDTModel.Store.HocKy" Multiplicity="1" />
+          <End Role="ThoiKhoaBieu" Type="TTDTModel.Store.ThoiKhoaBieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocKy">
+              <PropertyRef Name="MaHocKy" />
+            </Principal>
+            <Dependent Role="ThoiKhoaBieu">
+              <PropertyRef Name="MaHocKy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThoiKhoaBieu_MonHoc">
+          <End Role="MonHoc" Type="TTDTModel.Store.MonHoc" Multiplicity="1" />
+          <End Role="ThoiKhoaBieu" Type="TTDTModel.Store.ThoiKhoaBieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MonHoc">
+              <PropertyRef Name="MaMonHoc" />
+            </Principal>
+            <Dependent Role="ThoiKhoaBieu">
+              <PropertyRef Name="MaMonHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThoiKhoaBieu_TaiKhoan">
+          <End Role="ThongTin" Type="TTDTModel.Store.ThongTin" Multiplicity="1" />
+          <End Role="ThoiKhoaBieu" Type="TTDTModel.Store.ThoiKhoaBieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTin">
+              <PropertyRef Name="MaSinhVien" />
+            </Principal>
+            <Dependent Role="ThoiKhoaBieu">
+              <PropertyRef Name="MaSinhVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThoiKhoaBieu_Tuan">
+          <End Role="Tuan" Type="TTDTModel.Store.Tuan" Multiplicity="1" />
+          <End Role="ThoiKhoaBieu" Type="TTDTModel.Store.ThoiKhoaBieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tuan">
+              <PropertyRef Name="MaTuan" />
+            </Principal>
+            <Dependent Role="ThoiKhoaBieu">
+              <PropertyRef Name="MaTuan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTin_HeDaoTao">
+          <End Role="HeDaoTao" Type="TTDTModel.Store.HeDaoTao" Multiplicity="0..1" />
+          <End Role="ThongTin" Type="TTDTModel.Store.ThongTin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HeDaoTao">
+              <PropertyRef Name="MaHeDaoTao" />
+            </Principal>
+            <Dependent Role="ThongTin">
+              <PropertyRef Name="MaHeDaoTao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTin_Khoa">
+          <End Role="Khoa" Type="TTDTModel.Store.Khoa" Multiplicity="0..1" />
+          <End Role="ThongTin" Type="TTDTModel.Store.ThongTin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Khoa">
+              <PropertyRef Name="MaKhoa" />
+            </Principal>
+            <Dependent Role="ThongTin">
+              <PropertyRef Name="MaKhoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTin_KhoaHoc">
+          <End Role="KhoaHoc" Type="TTDTModel.Store.KhoaHoc" Multiplicity="0..1" />
+          <End Role="ThongTin" Type="TTDTModel.Store.ThongTin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KhoaHoc">
+              <PropertyRef Name="MaKhoaHoc" />
+            </Principal>
+            <Dependent Role="ThongTin">
+              <PropertyRef Name="MaKhoaHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTin_Nganh">
+          <End Role="Nganh" Type="TTDTModel.Store.Nganh" Multiplicity="0..1" />
+          <End Role="ThongTin" Type="TTDTModel.Store.ThongTin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nganh">
+              <PropertyRef Name="MaNganh" />
+            </Principal>
+            <Dependent Role="ThongTin">
+              <PropertyRef Name="MaNganh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TTDTModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TTDTEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="Diem_ChiTiet" EntityType="TTDTModel.Diem_ChiTiet" />
+          <EntitySet Name="Diem_TongQuat" EntityType="TTDTModel.Diem_TongQuat" />
+          <EntitySet Name="HeDaoTao" EntityType="TTDTModel.HeDaoTao" />
+          <EntitySet Name="HocKy" EntityType="TTDTModel.HocKy" />
+          <EntitySet Name="Khoa" EntityType="TTDTModel.Khoa" />
+          <EntitySet Name="KhoaHoc" EntityType="TTDTModel.KhoaHoc" />
+          <EntitySet Name="LichThi" EntityType="TTDTModel.LichThi" />
+          <EntitySet Name="MonHoc" EntityType="TTDTModel.MonHoc" />
+          <EntitySet Name="Nganh" EntityType="TTDTModel.Nganh" />
+          <EntitySet Name="SXTKB_MonHoc" EntityType="TTDTModel.SXTKB_MonHoc" />
+          <EntitySet Name="SXTKB_NhomMonHoc" EntityType="TTDTModel.SXTKB_NhomMonHoc" />
+          <EntitySet Name="Tuan" EntityType="TTDTModel.Tuan" />
+          <EntitySet Name="ThoiKhoaBieu" EntityType="TTDTModel.ThoiKhoaBieu" />
+          <EntitySet Name="ThongTin" EntityType="TTDTModel.ThongTin" />
+          <AssociationSet Name="FK_Diem_ChiTiet_HocKy" Association="TTDTModel.FK_Diem_ChiTiet_HocKy">
+            <End Role="HocKy" EntitySet="HocKy" />
+            <End Role="Diem_ChiTiet" EntitySet="Diem_ChiTiet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diem_ChiTiet_MonHoc" Association="TTDTModel.FK_Diem_ChiTiet_MonHoc">
+            <End Role="MonHoc" EntitySet="MonHoc" />
+            <End Role="Diem_ChiTiet" EntitySet="Diem_ChiTiet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diem_ChiTiet_TaiKhoan" Association="TTDTModel.FK_Diem_ChiTiet_TaiKhoan">
+            <End Role="ThongTin" EntitySet="ThongTin" />
+            <End Role="Diem_ChiTiet" EntitySet="Diem_ChiTiet" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diem_TongQuat_HocKy" Association="TTDTModel.FK_Diem_TongQuat_HocKy">
+            <End Role="HocKy" EntitySet="HocKy" />
+            <End Role="Diem_TongQuat" EntitySet="Diem_TongQuat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Diem_TongQuat_TaiKhoan" Association="TTDTModel.FK_Diem_TongQuat_TaiKhoan">
+            <End Role="ThongTin" EntitySet="ThongTin" />
+            <End Role="Diem_TongQuat" EntitySet="Diem_TongQuat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTin_HeDaoTao" Association="TTDTModel.FK_ThongTin_HeDaoTao">
+            <End Role="HeDaoTao" EntitySet="HeDaoTao" />
+            <End Role="ThongTin" EntitySet="ThongTin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichThi_HocKy" Association="TTDTModel.FK_LichThi_HocKy">
+            <End Role="HocKy" EntitySet="HocKy" />
+            <End Role="LichThi" EntitySet="LichThi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThoiKhoaBieu_HocKy" Association="TTDTModel.FK_ThoiKhoaBieu_HocKy">
+            <End Role="HocKy" EntitySet="HocKy" />
+            <End Role="ThoiKhoaBieu" EntitySet="ThoiKhoaBieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTin_Khoa" Association="TTDTModel.FK_ThongTin_Khoa">
+            <End Role="Khoa" EntitySet="Khoa" />
+            <End Role="ThongTin" EntitySet="ThongTin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTin_KhoaHoc" Association="TTDTModel.FK_ThongTin_KhoaHoc">
+            <End Role="KhoaHoc" EntitySet="KhoaHoc" />
+            <End Role="ThongTin" EntitySet="ThongTin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichThi_MonHoc" Association="TTDTModel.FK_LichThi_MonHoc">
+            <End Role="MonHoc" EntitySet="MonHoc" />
+            <End Role="LichThi" EntitySet="LichThi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_LichThi_TaiKhoan" Association="TTDTModel.FK_LichThi_TaiKhoan">
+            <End Role="ThongTin" EntitySet="ThongTin" />
+            <End Role="LichThi" EntitySet="LichThi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThoiKhoaBieu_MonHoc" Association="TTDTModel.FK_ThoiKhoaBieu_MonHoc">
+            <End Role="MonHoc" EntitySet="MonHoc" />
+            <End Role="ThoiKhoaBieu" EntitySet="ThoiKhoaBieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThongTin_Nganh" Association="TTDTModel.FK_ThongTin_Nganh">
+            <End Role="Nganh" EntitySet="Nganh" />
+            <End Role="ThongTin" EntitySet="ThongTin" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SXTKB_NhomMonHoc_SXTKB_MonHoc" Association="TTDTModel.FK_SXTKB_NhomMonHoc_SXTKB_MonHoc">
+            <End Role="SXTKB_MonHoc" EntitySet="SXTKB_MonHoc" />
+            <End Role="SXTKB_NhomMonHoc" EntitySet="SXTKB_NhomMonHoc" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThoiKhoaBieu_Tuan" Association="TTDTModel.FK_ThoiKhoaBieu_Tuan">
+            <End Role="Tuan" EntitySet="Tuan" />
+            <End Role="ThoiKhoaBieu" EntitySet="ThoiKhoaBieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ThoiKhoaBieu_TaiKhoan" Association="TTDTModel.FK_ThoiKhoaBieu_TaiKhoan">
+            <End Role="ThongTin" EntitySet="ThongTin" />
+            <End Role="ThoiKhoaBieu" EntitySet="ThoiKhoaBieu" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Diem_ChiTiet">
+          <Key>
+            <PropertyRef Name="MaSinhVien" />
+            <PropertyRef Name="MaHocKy" />
+            <PropertyRef Name="SoThuTu" />
+          </Key>
+          <Property Name="MaSinhVien" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaHocKy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SoThuTu" Type="Int32" Nullable="false" />
+          <Property Name="MaMonHoc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SoTinChi" Type="Int32" />
+          <Property Name="PhanTramKiemTra" Type="Int32" />
+          <Property Name="PhanTramThi" Type="Int32" />
+          <Property Name="DiemKiemTra" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiemThiLanMot" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiemTongKetHeMuoi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiemTongKetDiemChu" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HocKy" Relationship="TTDTModel.FK_Diem_ChiTiet_HocKy" FromRole="Diem_ChiTiet" ToRole="HocKy" />
+          <NavigationProperty Name="MonHoc" Relationship="TTDTModel.FK_Diem_ChiTiet_MonHoc" FromRole="Diem_ChiTiet" ToRole="MonHoc" />
+          <NavigationProperty Name="ThongTin" Relationship="TTDTModel.FK_Diem_ChiTiet_TaiKhoan" FromRole="Diem_ChiTiet" ToRole="ThongTin" />
+        </EntityType>
+        <EntityType Name="Diem_TongQuat">
+          <Key>
+            <PropertyRef Name="MaSinhVien" />
+            <PropertyRef Name="MaHocKy" />
+          </Key>
+          <Property Name="MaSinhVien" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaHocKy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiemTrungBinhHocKyHeMuoi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiemTrungBinhHocKyHeBon" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiemTrungBinhTichLuyHeMuoi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiemTrungBinhTichLuyHeBon" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SoTinChiDat" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SoTinChiTichLuy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DiemTrungBinhRenLuyenHocKy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PhanLoaiDTBRenLuyenHocKy" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HocKy" Relationship="TTDTModel.FK_Diem_TongQuat_HocKy" FromRole="Diem_TongQuat" ToRole="HocKy" />
+          <NavigationProperty Name="ThongTin" Relationship="TTDTModel.FK_Diem_TongQuat_TaiKhoan" FromRole="Diem_TongQuat" ToRole="ThongTin" />
+        </EntityType>
+        <EntityType Name="HeDaoTao">
+          <Key>
+            <PropertyRef Name="MaHeDaoTao" />
+          </Key>
+          <Property Name="MaHeDaoTao" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenHeDaoTao" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ThongTin" Relationship="TTDTModel.FK_ThongTin_HeDaoTao" FromRole="HeDaoTao" ToRole="ThongTin" />
+        </EntityType>
+        <EntityType Name="HocKy">
+          <Key>
+            <PropertyRef Name="MaHocKy" />
+          </Key>
+          <Property Name="MaHocKy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenHocKy" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Diem_ChiTiet" Relationship="TTDTModel.FK_Diem_ChiTiet_HocKy" FromRole="HocKy" ToRole="Diem_ChiTiet" />
+          <NavigationProperty Name="Diem_TongQuat" Relationship="TTDTModel.FK_Diem_TongQuat_HocKy" FromRole="HocKy" ToRole="Diem_TongQuat" />
+          <NavigationProperty Name="LichThi" Relationship="TTDTModel.FK_LichThi_HocKy" FromRole="HocKy" ToRole="LichThi" />
+          <NavigationProperty Name="ThoiKhoaBieu" Relationship="TTDTModel.FK_ThoiKhoaBieu_HocKy" FromRole="HocKy" ToRole="ThoiKhoaBieu" />
+        </EntityType>
+        <EntityType Name="Khoa">
+          <Key>
+            <PropertyRef Name="MaKhoa" />
+          </Key>
+          <Property Name="MaKhoa" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenKhoa" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ThongTin" Relationship="TTDTModel.FK_ThongTin_Khoa" FromRole="Khoa" ToRole="ThongTin" />
+        </EntityType>
+        <EntityType Name="KhoaHoc">
+          <Key>
+            <PropertyRef Name="MaKhoaHoc" />
+          </Key>
+          <Property Name="MaKhoaHoc" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenKhoaHoc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ThongTin" Relationship="TTDTModel.FK_ThongTin_KhoaHoc" FromRole="KhoaHoc" ToRole="ThongTin" />
+        </EntityType>
+        <EntityType Name="LichThi">
+          <Key>
+            <PropertyRef Name="MaSinhVien" />
+            <PropertyRef Name="MaHocKy" />
+            <PropertyRef Name="SoThuTu" />
+          </Key>
+          <Property Name="MaSinhVien" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaHocKy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SoMonThi" Type="Int32" />
+          <Property Name="SoThuTu" Type="Int32" Nullable="false" />
+          <Property Name="MaMonHoc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GhepThi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ToThi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SoLuong" Type="Int32" />
+          <Property Name="NgayThi" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GioBatDau" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SoPhut" Type="Int32" />
+          <Property Name="Phong" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="HinhThucThi" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HocKy" Relationship="TTDTModel.FK_LichThi_HocKy" FromRole="LichThi" ToRole="HocKy" />
+          <NavigationProperty Name="MonHoc" Relationship="TTDTModel.FK_LichThi_MonHoc" FromRole="LichThi" ToRole="MonHoc" />
+          <NavigationProperty Name="ThongTin" Relationship="TTDTModel.FK_LichThi_TaiKhoan" FromRole="LichThi" ToRole="ThongTin" />
+        </EntityType>
+        <EntityType Name="MonHoc">
+          <Key>
+            <PropertyRef Name="MaMonHoc" />
+          </Key>
+          <Property Name="MaMonHoc" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenMonHoc" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Diem_ChiTiet" Relationship="TTDTModel.FK_Diem_ChiTiet_MonHoc" FromRole="MonHoc" ToRole="Diem_ChiTiet" />
+          <NavigationProperty Name="LichThi" Relationship="TTDTModel.FK_LichThi_MonHoc" FromRole="MonHoc" ToRole="LichThi" />
+          <NavigationProperty Name="ThoiKhoaBieu" Relationship="TTDTModel.FK_ThoiKhoaBieu_MonHoc" FromRole="MonHoc" ToRole="ThoiKhoaBieu" />
+        </EntityType>
+        <EntityType Name="Nganh">
+          <Key>
+            <PropertyRef Name="MaNganh" />
+          </Key>
+          <Property Name="MaNganh" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenNganh" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ThongTin" Relationship="TTDTModel.FK_ThongTin_Nganh" FromRole="Nganh" ToRole="ThongTin" />
+        </EntityType>
+        <EntityType Name="SXTKB_MonHoc">
+          <Key>
+            <PropertyRef Name="MaMonHoc" />
+          </Key>
+          <Property Name="MaMonHoc" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenMonHoc" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="SXTKB_NhomMonHoc" Relationship="TTDTModel.FK_SXTKB_NhomMonHoc_SXTKB_MonHoc" FromRole="SXTKB_MonHoc" ToRole="SXTKB_NhomMonHoc" />
+        </EntityType>
+        <EntityType Name="SXTKB_NhomMonHoc">
+          <Key>
+            <PropertyRef Name="MaMonHoc" />
+            <PropertyRef Name="Nhom" />
+            <PropertyRef Name="Thu" />
+            <PropertyRef Name="TietBatDau" />
+          </Key>
+          <Property Name="MaMonHoc" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Nhom" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Thu" Type="Int32" Nullable="false" />
+          <Property Name="TietBatDau" Type="Int32" Nullable="false" />
+          <Property Name="SoTiet" Type="Int32" />
+          <NavigationProperty Name="SXTKB_MonHoc" Relationship="TTDTModel.FK_SXTKB_NhomMonHoc_SXTKB_MonHoc" FromRole="SXTKB_NhomMonHoc" ToRole="SXTKB_MonHoc" />
+        </EntityType>
+        <EntityType Name="Tuan">
+          <Key>
+            <PropertyRef Name="MaTuan" />
+          </Key>
+          <Property Name="MaTuan" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenTuan" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="ThoiKhoaBieu" Relationship="TTDTModel.FK_ThoiKhoaBieu_Tuan" FromRole="Tuan" ToRole="ThoiKhoaBieu" />
+        </EntityType>
+        <EntityType Name="ThoiKhoaBieu">
+          <Key>
+            <PropertyRef Name="MaSinhVien" />
+            <PropertyRef Name="MaHocKy" />
+            <PropertyRef Name="MaTuan" />
+            <PropertyRef Name="MaMonHoc" />
+            <PropertyRef Name="Thu" />
+            <PropertyRef Name="TietBatDau" />
+          </Key>
+          <Property Name="MaSinhVien" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaHocKy" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaTuan" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaMonHoc" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PhongHoc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Thu" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TietBatDau" Type="Int32" Nullable="false" />
+          <Property Name="SoTiet" Type="Int32" />
+          <Property Name="GiangVien" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Lop" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="HocKy" Relationship="TTDTModel.FK_ThoiKhoaBieu_HocKy" FromRole="ThoiKhoaBieu" ToRole="HocKy" />
+          <NavigationProperty Name="MonHoc" Relationship="TTDTModel.FK_ThoiKhoaBieu_MonHoc" FromRole="ThoiKhoaBieu" ToRole="MonHoc" />
+          <NavigationProperty Name="Tuan" Relationship="TTDTModel.FK_ThoiKhoaBieu_Tuan" FromRole="ThoiKhoaBieu" ToRole="Tuan" />
+          <NavigationProperty Name="ThongTin" Relationship="TTDTModel.FK_ThoiKhoaBieu_TaiKhoan" FromRole="ThoiKhoaBieu" ToRole="ThongTin" />
+        </EntityType>
+        <EntityType Name="ThongTin">
+          <Key>
+            <PropertyRef Name="MaSinhVien" />
+          </Key>
+          <Property Name="MaSinhVien" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TenSinhVien" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Lop" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaNganh" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaKhoa" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaHeDaoTao" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MaKhoaHoc" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Diem_ChiTiet" Relationship="TTDTModel.FK_Diem_ChiTiet_TaiKhoan" FromRole="ThongTin" ToRole="Diem_ChiTiet" />
+          <NavigationProperty Name="Diem_TongQuat" Relationship="TTDTModel.FK_Diem_TongQuat_TaiKhoan" FromRole="ThongTin" ToRole="Diem_TongQuat" />
+          <NavigationProperty Name="HeDaoTao" Relationship="TTDTModel.FK_ThongTin_HeDaoTao" FromRole="ThongTin" ToRole="HeDaoTao" />
+          <NavigationProperty Name="Khoa" Relationship="TTDTModel.FK_ThongTin_Khoa" FromRole="ThongTin" ToRole="Khoa" />
+          <NavigationProperty Name="KhoaHoc" Relationship="TTDTModel.FK_ThongTin_KhoaHoc" FromRole="ThongTin" ToRole="KhoaHoc" />
+          <NavigationProperty Name="LichThi" Relationship="TTDTModel.FK_LichThi_TaiKhoan" FromRole="ThongTin" ToRole="LichThi" />
+          <NavigationProperty Name="Nganh" Relationship="TTDTModel.FK_ThongTin_Nganh" FromRole="ThongTin" ToRole="Nganh" />
+          <NavigationProperty Name="ThoiKhoaBieu" Relationship="TTDTModel.FK_ThoiKhoaBieu_TaiKhoan" FromRole="ThongTin" ToRole="ThoiKhoaBieu" />
+        </EntityType>
+        <Association Name="FK_Diem_ChiTiet_HocKy">
+          <End Role="HocKy" Type="TTDTModel.HocKy" Multiplicity="1" />
+          <End Role="Diem_ChiTiet" Type="TTDTModel.Diem_ChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocKy">
+              <PropertyRef Name="MaHocKy" />
+            </Principal>
+            <Dependent Role="Diem_ChiTiet">
+              <PropertyRef Name="MaHocKy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diem_ChiTiet_MonHoc">
+          <End Role="MonHoc" Type="TTDTModel.MonHoc" Multiplicity="0..1" />
+          <End Role="Diem_ChiTiet" Type="TTDTModel.Diem_ChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MonHoc">
+              <PropertyRef Name="MaMonHoc" />
+            </Principal>
+            <Dependent Role="Diem_ChiTiet">
+              <PropertyRef Name="MaMonHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diem_ChiTiet_TaiKhoan">
+          <End Role="ThongTin" Type="TTDTModel.ThongTin" Multiplicity="1" />
+          <End Role="Diem_ChiTiet" Type="TTDTModel.Diem_ChiTiet" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTin">
+              <PropertyRef Name="MaSinhVien" />
+            </Principal>
+            <Dependent Role="Diem_ChiTiet">
+              <PropertyRef Name="MaSinhVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diem_TongQuat_HocKy">
+          <End Role="HocKy" Type="TTDTModel.HocKy" Multiplicity="1" />
+          <End Role="Diem_TongQuat" Type="TTDTModel.Diem_TongQuat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocKy">
+              <PropertyRef Name="MaHocKy" />
+            </Principal>
+            <Dependent Role="Diem_TongQuat">
+              <PropertyRef Name="MaHocKy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Diem_TongQuat_TaiKhoan">
+          <End Role="ThongTin" Type="TTDTModel.ThongTin" Multiplicity="1" />
+          <End Role="Diem_TongQuat" Type="TTDTModel.Diem_TongQuat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTin">
+              <PropertyRef Name="MaSinhVien" />
+            </Principal>
+            <Dependent Role="Diem_TongQuat">
+              <PropertyRef Name="MaSinhVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTin_HeDaoTao">
+          <End Role="HeDaoTao" Type="TTDTModel.HeDaoTao" Multiplicity="0..1" />
+          <End Role="ThongTin" Type="TTDTModel.ThongTin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HeDaoTao">
+              <PropertyRef Name="MaHeDaoTao" />
+            </Principal>
+            <Dependent Role="ThongTin">
+              <PropertyRef Name="MaHeDaoTao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichThi_HocKy">
+          <End Role="HocKy" Type="TTDTModel.HocKy" Multiplicity="1" />
+          <End Role="LichThi" Type="TTDTModel.LichThi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocKy">
+              <PropertyRef Name="MaHocKy" />
+            </Principal>
+            <Dependent Role="LichThi">
+              <PropertyRef Name="MaHocKy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThoiKhoaBieu_HocKy">
+          <End Role="HocKy" Type="TTDTModel.HocKy" Multiplicity="1" />
+          <End Role="ThoiKhoaBieu" Type="TTDTModel.ThoiKhoaBieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HocKy">
+              <PropertyRef Name="MaHocKy" />
+            </Principal>
+            <Dependent Role="ThoiKhoaBieu">
+              <PropertyRef Name="MaHocKy" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTin_Khoa">
+          <End Role="Khoa" Type="TTDTModel.Khoa" Multiplicity="0..1" />
+          <End Role="ThongTin" Type="TTDTModel.ThongTin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Khoa">
+              <PropertyRef Name="MaKhoa" />
+            </Principal>
+            <Dependent Role="ThongTin">
+              <PropertyRef Name="MaKhoa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTin_KhoaHoc">
+          <End Role="KhoaHoc" Type="TTDTModel.KhoaHoc" Multiplicity="0..1" />
+          <End Role="ThongTin" Type="TTDTModel.ThongTin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="KhoaHoc">
+              <PropertyRef Name="MaKhoaHoc" />
+            </Principal>
+            <Dependent Role="ThongTin">
+              <PropertyRef Name="MaKhoaHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichThi_MonHoc">
+          <End Role="MonHoc" Type="TTDTModel.MonHoc" Multiplicity="0..1" />
+          <End Role="LichThi" Type="TTDTModel.LichThi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MonHoc">
+              <PropertyRef Name="MaMonHoc" />
+            </Principal>
+            <Dependent Role="LichThi">
+              <PropertyRef Name="MaMonHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_LichThi_TaiKhoan">
+          <End Role="ThongTin" Type="TTDTModel.ThongTin" Multiplicity="1" />
+          <End Role="LichThi" Type="TTDTModel.LichThi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTin">
+              <PropertyRef Name="MaSinhVien" />
+            </Principal>
+            <Dependent Role="LichThi">
+              <PropertyRef Name="MaSinhVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThoiKhoaBieu_MonHoc">
+          <End Role="MonHoc" Type="TTDTModel.MonHoc" Multiplicity="1" />
+          <End Role="ThoiKhoaBieu" Type="TTDTModel.ThoiKhoaBieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MonHoc">
+              <PropertyRef Name="MaMonHoc" />
+            </Principal>
+            <Dependent Role="ThoiKhoaBieu">
+              <PropertyRef Name="MaMonHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThongTin_Nganh">
+          <End Role="Nganh" Type="TTDTModel.Nganh" Multiplicity="0..1" />
+          <End Role="ThongTin" Type="TTDTModel.ThongTin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nganh">
+              <PropertyRef Name="MaNganh" />
+            </Principal>
+            <Dependent Role="ThongTin">
+              <PropertyRef Name="MaNganh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SXTKB_NhomMonHoc_SXTKB_MonHoc">
+          <End Role="SXTKB_MonHoc" Type="TTDTModel.SXTKB_MonHoc" Multiplicity="1" />
+          <End Role="SXTKB_NhomMonHoc" Type="TTDTModel.SXTKB_NhomMonHoc" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SXTKB_MonHoc">
+              <PropertyRef Name="MaMonHoc" />
+            </Principal>
+            <Dependent Role="SXTKB_NhomMonHoc">
+              <PropertyRef Name="MaMonHoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThoiKhoaBieu_Tuan">
+          <End Role="Tuan" Type="TTDTModel.Tuan" Multiplicity="1" />
+          <End Role="ThoiKhoaBieu" Type="TTDTModel.ThoiKhoaBieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tuan">
+              <PropertyRef Name="MaTuan" />
+            </Principal>
+            <Dependent Role="ThoiKhoaBieu">
+              <PropertyRef Name="MaTuan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ThoiKhoaBieu_TaiKhoan">
+          <End Role="ThongTin" Type="TTDTModel.ThongTin" Multiplicity="1" />
+          <End Role="ThoiKhoaBieu" Type="TTDTModel.ThoiKhoaBieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThongTin">
+              <PropertyRef Name="MaSinhVien" />
+            </Principal>
+            <Dependent Role="ThoiKhoaBieu">
+              <PropertyRef Name="MaSinhVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TTDTModelStoreContainer" CdmEntityContainer="TTDTEntities">
+          <EntitySetMapping Name="Diem_ChiTiet">
+            <EntityTypeMapping TypeName="TTDTModel.Diem_ChiTiet">
+              <MappingFragment StoreEntitySet="Diem_ChiTiet">
+                <ScalarProperty Name="MaSinhVien" ColumnName="MaSinhVien" />
+                <ScalarProperty Name="MaHocKy" ColumnName="MaHocKy" />
+                <ScalarProperty Name="SoThuTu" ColumnName="SoThuTu" />
+                <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
+                <ScalarProperty Name="SoTinChi" ColumnName="SoTinChi" />
+                <ScalarProperty Name="PhanTramKiemTra" ColumnName="PhanTramKiemTra" />
+                <ScalarProperty Name="PhanTramThi" ColumnName="PhanTramThi" />
+                <ScalarProperty Name="DiemKiemTra" ColumnName="DiemKiemTra" />
+                <ScalarProperty Name="DiemThiLanMot" ColumnName="DiemThiLanMot" />
+                <ScalarProperty Name="DiemTongKetHeMuoi" ColumnName="DiemTongKetHeMuoi" />
+                <ScalarProperty Name="DiemTongKetDiemChu" ColumnName="DiemTongKetDiemChu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diem_TongQuat">
+            <EntityTypeMapping TypeName="TTDTModel.Diem_TongQuat">
+              <MappingFragment StoreEntitySet="Diem_TongQuat">
+                <ScalarProperty Name="MaSinhVien" ColumnName="MaSinhVien" />
+                <ScalarProperty Name="MaHocKy" ColumnName="MaHocKy" />
+                <ScalarProperty Name="DiemTrungBinhHocKyHeMuoi" ColumnName="DiemTrungBinhHocKyHeMuoi" />
+                <ScalarProperty Name="DiemTrungBinhHocKyHeBon" ColumnName="DiemTrungBinhHocKyHeBon" />
+                <ScalarProperty Name="DiemTrungBinhTichLuyHeMuoi" ColumnName="DiemTrungBinhTichLuyHeMuoi" />
+                <ScalarProperty Name="DiemTrungBinhTichLuyHeBon" ColumnName="DiemTrungBinhTichLuyHeBon" />
+                <ScalarProperty Name="SoTinChiDat" ColumnName="SoTinChiDat" />
+                <ScalarProperty Name="SoTinChiTichLuy" ColumnName="SoTinChiTichLuy" />
+                <ScalarProperty Name="DiemTrungBinhRenLuyenHocKy" ColumnName="DiemTrungBinhRenLuyenHocKy" />
+                <ScalarProperty Name="PhanLoaiDTBRenLuyenHocKy" ColumnName="PhanLoaiDTBRenLuyenHocKy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HeDaoTao">
+            <EntityTypeMapping TypeName="TTDTModel.HeDaoTao">
+              <MappingFragment StoreEntitySet="HeDaoTao">
+                <ScalarProperty Name="MaHeDaoTao" ColumnName="MaHeDaoTao" />
+                <ScalarProperty Name="TenHeDaoTao" ColumnName="TenHeDaoTao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HocKy">
+            <EntityTypeMapping TypeName="TTDTModel.HocKy">
+              <MappingFragment StoreEntitySet="HocKy">
+                <ScalarProperty Name="MaHocKy" ColumnName="MaHocKy" />
+                <ScalarProperty Name="TenHocKy" ColumnName="TenHocKy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Khoa">
+            <EntityTypeMapping TypeName="TTDTModel.Khoa">
+              <MappingFragment StoreEntitySet="Khoa">
+                <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+                <ScalarProperty Name="TenKhoa" ColumnName="TenKhoa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KhoaHoc">
+            <EntityTypeMapping TypeName="TTDTModel.KhoaHoc">
+              <MappingFragment StoreEntitySet="KhoaHoc">
+                <ScalarProperty Name="MaKhoaHoc" ColumnName="MaKhoaHoc" />
+                <ScalarProperty Name="TenKhoaHoc" ColumnName="TenKhoaHoc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LichThi">
+            <EntityTypeMapping TypeName="TTDTModel.LichThi">
+              <MappingFragment StoreEntitySet="LichThi">
+                <ScalarProperty Name="MaSinhVien" ColumnName="MaSinhVien" />
+                <ScalarProperty Name="MaHocKy" ColumnName="MaHocKy" />
+                <ScalarProperty Name="SoMonThi" ColumnName="SoMonThi" />
+                <ScalarProperty Name="SoThuTu" ColumnName="SoThuTu" />
+                <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
+                <ScalarProperty Name="GhepThi" ColumnName="GhepThi" />
+                <ScalarProperty Name="ToThi" ColumnName="ToThi" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="NgayThi" ColumnName="NgayThi" />
+                <ScalarProperty Name="GioBatDau" ColumnName="GioBatDau" />
+                <ScalarProperty Name="SoPhut" ColumnName="SoPhut" />
+                <ScalarProperty Name="Phong" ColumnName="Phong" />
+                <ScalarProperty Name="HinhThucThi" ColumnName="HinhThucThi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MonHoc">
+            <EntityTypeMapping TypeName="TTDTModel.MonHoc">
+              <MappingFragment StoreEntitySet="MonHoc">
+                <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
+                <ScalarProperty Name="TenMonHoc" ColumnName="TenMonHoc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nganh">
+            <EntityTypeMapping TypeName="TTDTModel.Nganh">
+              <MappingFragment StoreEntitySet="Nganh">
+                <ScalarProperty Name="MaNganh" ColumnName="MaNganh" />
+                <ScalarProperty Name="TenNganh" ColumnName="TenNganh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SXTKB_MonHoc">
+            <EntityTypeMapping TypeName="TTDTModel.SXTKB_MonHoc">
+              <MappingFragment StoreEntitySet="SXTKB_MonHoc">
+                <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
+                <ScalarProperty Name="TenMonHoc" ColumnName="TenMonHoc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SXTKB_NhomMonHoc">
+            <EntityTypeMapping TypeName="TTDTModel.SXTKB_NhomMonHoc">
+              <MappingFragment StoreEntitySet="SXTKB_NhomMonHoc">
+                <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
+                <ScalarProperty Name="Nhom" ColumnName="Nhom" />
+                <ScalarProperty Name="Thu" ColumnName="Thu" />
+                <ScalarProperty Name="TietBatDau" ColumnName="TietBatDau" />
+                <ScalarProperty Name="SoTiet" ColumnName="SoTiet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tuan">
+            <EntityTypeMapping TypeName="TTDTModel.Tuan">
+              <MappingFragment StoreEntitySet="Tuan">
+                <ScalarProperty Name="MaTuan" ColumnName="MaTuan" />
+                <ScalarProperty Name="TenTuan" ColumnName="TenTuan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThoiKhoaBieu">
+            <EntityTypeMapping TypeName="TTDTModel.ThoiKhoaBieu">
+              <MappingFragment StoreEntitySet="ThoiKhoaBieu">
+                <ScalarProperty Name="MaSinhVien" ColumnName="MaSinhVien" />
+                <ScalarProperty Name="MaHocKy" ColumnName="MaHocKy" />
+                <ScalarProperty Name="MaTuan" ColumnName="MaTuan" />
+                <ScalarProperty Name="MaMonHoc" ColumnName="MaMonHoc" />
+                <ScalarProperty Name="PhongHoc" ColumnName="PhongHoc" />
+                <ScalarProperty Name="Thu" ColumnName="Thu" />
+                <ScalarProperty Name="TietBatDau" ColumnName="TietBatDau" />
+                <ScalarProperty Name="SoTiet" ColumnName="SoTiet" />
+                <ScalarProperty Name="GiangVien" ColumnName="GiangVien" />
+                <ScalarProperty Name="Lop" ColumnName="Lop" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThongTin">
+            <EntityTypeMapping TypeName="TTDTModel.ThongTin">
+              <MappingFragment StoreEntitySet="ThongTin">
+                <ScalarProperty Name="MaSinhVien" ColumnName="MaSinhVien" />
+                <ScalarProperty Name="TenSinhVien" ColumnName="TenSinhVien" />
+                <ScalarProperty Name="Lop" ColumnName="Lop" />
+                <ScalarProperty Name="MaNganh" ColumnName="MaNganh" />
+                <ScalarProperty Name="MaKhoa" ColumnName="MaKhoa" />
+                <ScalarProperty Name="MaHeDaoTao" ColumnName="MaHeDaoTao" />
+                <ScalarProperty Name="MaKhoaHoc" ColumnName="MaKhoaHoc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4060651c943b46e890f52e37deec56fe" Name="Diagram1">
+        <EntityTypeShape EntityType="TTDTModel.Diem_ChiTiet" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.Diem_TongQuat" Width="1.5" PointX="8.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.HeDaoTao" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.HocKy" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.Khoa" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.KhoaHoc" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.LichThi" Width="1.5" PointX="5.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.MonHoc" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.Nganh" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.SXTKB_MonHoc" Width="1.5" PointX="7.75" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.SXTKB_NhomMonHoc" Width="1.5" PointX="10" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.Tuan" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.ThoiKhoaBieu" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TTDTModel.ThongTin" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="TTDTModel.FK_Diem_ChiTiet_HocKy" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_Diem_ChiTiet_MonHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_Diem_ChiTiet_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_Diem_TongQuat_HocKy" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_Diem_TongQuat_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_ThongTin_HeDaoTao" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_LichThi_HocKy" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_ThoiKhoaBieu_HocKy" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_ThongTin_Khoa" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_ThongTin_KhoaHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_LichThi_MonHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_LichThi_TaiKhoan" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_ThoiKhoaBieu_MonHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_ThongTin_Nganh" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_SXTKB_NhomMonHoc_SXTKB_MonHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_ThoiKhoaBieu_Tuan" ManuallyRouted="false" />
+        <AssociationConnector Association="TTDTModel.FK_ThoiKhoaBieu_TaiKhoan" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
