@@ -78,6 +78,11 @@
     <%  String alert = Convert.ToString(ViewBag.Alert);
         switch (alert)
         {
+            case "MaMonHocExist":
+                %>
+                <script>alert('Mã môn học vừa nhập đã có trong cơ sở dữ liệu.');</script>
+                <%
+                break;
             case "ThemMonHocOk":
                 %>
                 <script>alert('Thêm môn học thành công.');</script>

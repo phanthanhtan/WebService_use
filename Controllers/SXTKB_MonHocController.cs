@@ -157,10 +157,17 @@ namespace WebService_use.Models
                 String mamonhoc = fc["txtMaMonHoc"].ToString();
                 mh.MaMonHoc = mamonhoc;
                 mh.TenMonHoc = fc["txtTenMonHoc"].ToString();
-                TTDTEntities entity = new TTDTEntities();
-                entity.SXTKB_MonHoc.Add(mh);
-                entity.SaveChanges();
-                return RedirectToAction("../SXTKB/SXTKB_MonHoc/XemMonHoc/" + mamonhoc + "_ThemMonHocOk");
+                try//thêm môn học
+                {
+                    TTDTEntities entity = new TTDTEntities();
+                    entity.SXTKB_MonHoc.Add(mh);
+                    entity.SaveChanges();
+                    return RedirectToAction("../SXTKB/SXTKB_MonHoc/XemMonHoc/" + mamonhoc + "_ThemMonHocOk");
+                }
+                catch//mã môn học đã có => chuyển đến trang xem của mã môn học đó
+                {
+                    return RedirectToAction("../SXTKB/SXTKB_MonHoc/XemMonHoc/" + mamonhoc + "_MaMonHocExist");
+                }
             }
             catch//lỗi
             {
